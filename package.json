@@ -1,0 +1,26 @@
+{
+  "name": "test262-stream",
+  "version": "1.0.0",
+  "description": "A Node.js API for traversing the Test262 test suite",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "jshint lib test",
+    "test": "npm run lint && npm run test-unit",
+    "test-unit": "tape test/test.js"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "klaw": "^2.1.0",
+    "test262-compiler": "^3.0.0"
+  }
+}
