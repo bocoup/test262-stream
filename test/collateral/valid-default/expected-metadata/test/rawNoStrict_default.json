@@ -10,5 +10,6 @@
   },
   "copyright": "",
   "scenario": "default",
-  "insertionIndex": -1
+  "insertionIndex": -1,
+  "source": "/*---\ndescription: Should not test in strict mode\nflags: [raw]\n---*/\nvar seemsStrict;\ntry {\n  x = 1;\n} catch (err) {\n  seemsStrict = err.constructor === ReferenceError;\n}\n\nif (seemsStrict) {\n  throw new Error('Script erroneously interpreted in strict mode.');\n}\n"
 }

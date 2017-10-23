@@ -16,5 +16,6 @@
   },
   "copyright": "",
   "scenario": "default",
-  "insertionIndex": 890
+  "insertionIndex": 890,
+  "source": "/*---\ndescription: Async negative test\nnegative:\n  phase: runtime\n  type: RangeError\nflags: [async]\n---*/\n\nsetTimeout(function() {\n  $DONE(new RangeError());\n}, 1000);\n"
 }

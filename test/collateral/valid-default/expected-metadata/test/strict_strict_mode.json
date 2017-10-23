@@ -16,5 +16,6 @@
   },
   "copyright": "",
   "scenario": "strict mode",
-  "insertionIndex": 904
+  "insertionIndex": 904,
+  "source": "/*---\ndescription: Should not test in sloppy mode\nflags: [onlyStrict]\nnegative:\n  phase: runtime\n  type: ReferenceError\n---*/\nx = 5;\n$ERROR('Not in strict mode');\n"
 }

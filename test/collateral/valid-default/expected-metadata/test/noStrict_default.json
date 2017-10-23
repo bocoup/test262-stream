@@ -12,5 +12,6 @@
   },
   "copyright": "",
   "scenario": "default",
-  "insertionIndex": 890
+  "insertionIndex": 890,
+  "source": "/*---\ndescription: Should not test in strict mode\nflags: [noStrict]\n---*/\nx = 5;\n"
 }

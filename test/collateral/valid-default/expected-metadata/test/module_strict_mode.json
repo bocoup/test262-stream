@@ -12,5 +12,6 @@
   },
   "copyright": "",
   "scenario": "strict mode",
-  "insertionIndex": 904
+  "insertionIndex": 904,
+  "source": "/*---\ndescription: A test for module code\nflags: [module]\n---*/\n\nimport fixture from './module_FIXTURE.js';\n"
 }
