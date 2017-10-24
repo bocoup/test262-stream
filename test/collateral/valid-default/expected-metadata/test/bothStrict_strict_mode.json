@@ -20,5 +20,5 @@
   "copyright": "",
   "scenario": "strict mode",
   "insertionIndex": 904,
-  "source": "/*---\ndescription: Should test in both modes\nfeatures: [var, try, if]\nnegative:\n  phase: runtime\n  type: ReferenceError\n---*/\nvar strict;\ntry { x = 1; strict = false;} catch(e) { strict = true }\n\nif(strict) {\n    y = 1;\n} else {\n    throw new ReferenceError();\n}\n"
+  "raw": "/*---\ndescription: Should test in both modes\nfeatures: [var, try, if]\nnegative:\n  phase: runtime\n  type: ReferenceError\n---*/\nvar strict;\ntry { x = 1; strict = false;} catch(e) { strict = true }\n\nif(strict) {\n    y = 1;\n} else {\n    throw new ReferenceError();\n}\n"
 }

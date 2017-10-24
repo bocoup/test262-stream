@@ -15,5 +15,5 @@
   "copyright": "",
   "scenario": "default",
   "insertionIndex": 890,
-  "source": "/*---\ndescription: Should report the expected error indicated by the \"negative\" frontmatter\nnegative:\n  phase: runtime\n  type: Test262Error\n---*/\n"
+  "raw": "/*---\ndescription: Should report the expected error indicated by the \"negative\" frontmatter\nnegative:\n  phase: runtime\n  type: Test262Error\n---*/\n"
 }

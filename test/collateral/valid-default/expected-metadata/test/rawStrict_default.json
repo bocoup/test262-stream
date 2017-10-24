@@ -11,5 +11,5 @@
   "copyright": "",
   "scenario": "default",
   "insertionIndex": -1,
-  "source": "/*---\ndescription: Should not test in strict mode (but allow strict mode to be enabled)\nflags: [raw]\n---*/\n'use strict';\nvar seemsStrict;\ntry {\n  x = 1;\n} catch (err) {\n  seemsStrict = err.constructor === ReferenceError;\n}\n\nif (!seemsStrict) {\n  throw new Error('Script erroneously not interpreted in strict mode.');\n}\n"
+  "raw": "/*---\ndescription: Should not test in strict mode (but allow strict mode to be enabled)\nflags: [raw]\n---*/\n'use strict';\nvar seemsStrict;\ntry {\n  x = 1;\n} catch (err) {\n  seemsStrict = err.constructor === ReferenceError;\n}\n\nif (!seemsStrict) {\n  throw new Error('Script erroneously not interpreted in strict mode.');\n}\n"
 }

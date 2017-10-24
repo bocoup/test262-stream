@@ -13,5 +13,5 @@
   "copyright": "",
   "scenario": "default",
   "insertionIndex": 890,
-  "source": "/*---\ndescription: A test for module code\nflags: [module]\n---*/\n\nimport fixture from './module_FIXTURE.js';\n"
+  "raw": "/*---\ndescription: A test for module code\nflags: [module]\n---*/\n\nimport fixture from './module_FIXTURE.js';\n"
 }
