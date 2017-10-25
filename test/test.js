@@ -41,7 +41,7 @@ function makeDataHandler(t, ids, fixtureDir) {
       return;
     }
 
-    // `RegExp.prototype.test` acceptes `undefined`, so an explicit type
+    // `RegExp.prototype.test` accepts `undefined`, so an explicit type
     // check is necessary.
     t.equal(typeof test.scenario, 'string', '`scenario` property is a string value');
     t.ok(scenarios.test(test.scenario), '`scenario` property is a valid value');
@@ -128,6 +128,24 @@ tape('valid source directory (with custom includes)', t => {
 
   stream.on('end', () => {
     t.equal(ids.length, 2, 'Reports every available test');
+    t.end();
+  });
+});
+
+tape('skipScenarios', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-skip-scenarios');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), { skipScenarios: true });
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 1, 'Reports every available test');
     t.end();
   });
 });
