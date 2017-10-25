@@ -13,5 +13,5 @@
   "copyright": "",
   "scenario": "default",
   "insertionIndex": 890,
-  "raw": "/*---\ndescription: Should not test in strict mode\nflags: [noStrict]\n---*/\nx = 5;\n"
+  "source": null
 }

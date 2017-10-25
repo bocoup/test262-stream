@@ -13,5 +13,5 @@
   "copyright": "",
   "scenario": "strict mode",
   "insertionIndex": 904,
-  "raw": "/*---\ndescription: Async test\nflags: [async]\n---*/\n\nvar p = new Promise(function(resolve) {\n  resolve();\n});\n\np.then($DONE, $DONE);\n"
+  "source": null
 }

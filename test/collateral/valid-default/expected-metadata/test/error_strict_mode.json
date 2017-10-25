@@ -15,5 +15,5 @@
   "copyright": "",
   "scenario": "strict mode",
   "insertionIndex": 904,
-  "raw": "/*---\ndescription: Fails by calling $ERROR\nnegative:\n  phase: runtime\n  type: Test262Error\n---*/\n\n$ERROR('failure message');\n"
+  "source": null
 }
