@@ -132,6 +132,26 @@ tape('valid source directory (with custom includes)', t => {
   });
 });
 
+tape('withSource', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-with-source');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), {
+    withSource: true
+  });
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 2, 'Reports every available test');
+    t.end();
+  });
+});
+
 tape('missing `assert.js`', t => {
   const stream = new TestStream(path.join(__dirname, 'collateral', 'invalid-missing-harness'));
 
