@@ -1,0 +1,23 @@
+{
+  "file": "test/skipScenarios.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "Should only produce one test object, with the default scenario",
+    "features": [
+      "var",
+      "try",
+      "if"
+    ],
+    "negative": {
+      "phase": "runtime",
+      "type": "ReferenceError"
+    },
+    "flags": {},
+    "includes": [
+      "assert.js"
+    ]
+  },
+  "copyright": "",
+  "scenario": "default",
+  "insertionIndex": 890
+}
