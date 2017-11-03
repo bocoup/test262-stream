@@ -19,7 +19,13 @@ var stream = new TestStream('/path/to/test262', {
     // directory paths) will be created; all paths are interpreted relative to
     // the root of the provided `test262Dir`
     // Optional. Defaults to ['test']
-    paths: ['test/built-ins/eval', 'test/language/statements/empty/S12.3_A1.js']
+    paths: ['test/built-ins/eval', 'test/language/statements/empty/S12.3_A1.js'],
+
+    // By default, this stream will emit an error if the provided version of
+    // Test262 is not supported; this behavior may be disabled by providing a
+    // value of the expected version. Use of this option may cause the stream
+    // to emit invalid tests; consider updating the library instead.
+    acceptVersion: '2.0.0'
   });
 
 stream.on('data', function(test) {
