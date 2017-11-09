@@ -165,3 +165,79 @@ tape.skip('non-existent source directory', t => {
     t.end();
   });
 });
+
+tape('valid source directory (with a supported version)', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-version-supported');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'));
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 1, 'Reports every available test');
+    t.end();
+  });
+});
+
+tape('invalid source directory (with an unsupported version)', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'invalid-version-unsupported');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'));
+
+  stream.on('data', () => {
+    t.end(new Error('Stream should not emit a `data` event'));
+  });
+
+  stream.on('end', () => {
+    t.end(new Error('Stream should not emit an `end` event'));
+  });
+
+  stream.on('error', (error) => {
+    t.ok(error, '`error` event should be published with an object');
+    t.end();
+  });
+});
+
+tape('invalid source directory (accepting newer version)', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-version-ignored');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), {
+    acceptVersion: '999.0.0'
+  });
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 1, 'Reports every available test');
+    t.end();
+  });
+});
+
+tape('invalid source directory (with a version that differs from the "accepted" versoin)', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'invalid-version-other-accepted');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), {
+    acceptVersion: '2.0.1'
+  });
+
+  stream.on('data', () => {
+    t.end(new Error('Stream should not emit a `data` event'));
+  });
+
+  stream.on('end', () => {
+    t.end(new Error('Stream should not emit an `end` event'));
+  });
+
+  stream.on('error', (error) => {
+    t.ok(error, '`error` event should be published with an object');
+    t.end();
+  });
+});
