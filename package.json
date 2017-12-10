@@ -21,6 +21,6 @@
   },
   "dependencies": {
     "klaw": "^2.1.0",
-    "test262-compiler": "^3.0.0"
+    "test262-parser": "^2.0.7"
   }
 }
