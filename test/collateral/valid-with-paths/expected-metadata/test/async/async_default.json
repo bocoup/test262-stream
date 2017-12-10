@@ -8,10 +8,11 @@
     },
     "includes": [
       "assert.js",
+      "sta.js",
       "doneprintHandle.js"
     ]
   },
   "copyright": "",
   "scenario": "default",
-  "insertionIndex": 691
+  "insertionIndex": 565
 }

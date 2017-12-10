@@ -14,10 +14,11 @@
     },
     "flags": {},
     "includes": [
-      "assert.js"
+      "assert.js",
+      "sta.js"
     ]
   },
   "copyright": "",
   "scenario": "strict mode",
-  "insertionIndex": 580
+  "insertionIndex": 454
 }

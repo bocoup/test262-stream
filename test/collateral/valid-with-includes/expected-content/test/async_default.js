@@ -1,21 +1,3 @@
-function Test262Error(message) {
-    if (message) this.message = message;
-}
-
-Test262Error.prototype.name = "Test262Error";
-
-Test262Error.prototype.toString = function () {
-    return "Test262Error: " + this.message;
-};
-
-function $ERROR(err) {
-  if(typeof err === "object" && err !== null && "name" in err) {
-      throw err;
-  } else {
-    throw new Test262Error(err);
-  }
-}
-
 // This is a CUSTOM assert.js
 
 'It has some CUSTOM contents';
@@ -34,6 +16,20 @@ whitespace: ;
 
 void "end of CUSTOM assert.js";
 
+// This is a custom implementation of `sta.js`
+function Test262Error(message) {
+  this.message = message || '';
+}
+
+Test262Error.prototype.toString = function() {
+  return 'Test262Error: ' + this.message;
+};
+
+var $ERROR = function $ERROR(message) {
+  throw new Test262Error(message);
+};
+// End custom implementation of `sta.js`
+
 // This is a customized implementation of `doneprintHandle.js`
 function $DONE(){
   if(!arguments[0]) {
@@ -43,6 +39,7 @@ function $DONE(){
   }
 }
 // End customized implementation of `doneprintHandle.js`
+
 
 
 var p = new Promise(function(resolve) {

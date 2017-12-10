@@ -7,10 +7,11 @@
       "module": true
     },
     "includes": [
-      "assert.js"
+      "assert.js",
+      "sta.js"
     ]
   },
   "copyright": "",
   "scenario": "default",
-  "insertionIndex": 566
+  "insertionIndex": 440
 }
