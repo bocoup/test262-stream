@@ -16,19 +16,6 @@ function $ERROR(err) {
   }
 }
 
-function $DONE(err) {
-  if (err) {
-    if(typeof err === "object" && err !== null && "name" in err) {
-      print('test262/error ' + err.name + ': ' + err.message);
-    } else {
-      print('test262/error Test262Error: ' + err);
-    }
-  }
-  print('test262/done');
-  $262.destroy();
-}
-
-
 // This is assert.js
 
 'It has some contents';
@@ -46,6 +33,13 @@ var including, trailing;
 whitespace: ;                    
 
 void "end of assert.js";
+
+function $DONE(){
+  if(!arguments[0])
+    print('Test262:AsyncTestComplete');
+  else
+    print('Error: ' + arguments[0]);
+}
 
 
 var p = new Promise(function(resolve) {

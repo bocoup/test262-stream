@@ -16,9 +16,9 @@ function $ERROR(err) {
   }
 }
 
-// This is assert.js
+// This is a CUSTOM assert.js
 
-'It has some contents';
+'It has some CUSTOM contents';
 
 /* that
  *
@@ -29,10 +29,24 @@ function $ERROR(err) {
 
 `be ${ "modified" }`;
 
-var including, trailing;
+var including, CUSTOM, trailing;
 whitespace: ;                    
 
-void "end of assert.js";
+void "end of CUSTOM assert.js";
+
+// This is a customized implementation of `doneprintHandle.js`
+function $DONE(){
+  if(!arguments[0]) {
+    print('Test262:AsyncTestComplete');
+  } else {
+    print('Error: ' + arguments[0]);
+  }
+}
+// End customized implementation of `doneprintHandle.js`
 
 
-;$DONE();
+var p = new Promise(function(resolve) {
+  resolve();
+});
+
+p.then($DONE, $DONE);

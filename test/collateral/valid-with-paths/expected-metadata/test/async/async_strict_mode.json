@@ -7,10 +7,11 @@
       "async": true
     },
     "includes": [
-      "assert.js"
+      "assert.js",
+      "doneprintHandle.js"
     ]
   },
   "copyright": "",
   "scenario": "strict mode",
-  "insertionIndex": 866
+  "insertionIndex": 705
 }
