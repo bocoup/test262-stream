@@ -28,10 +28,6 @@ function $DONE(err) {
   $262.destroy();
 }
 
-function $LOG(str) {
-  print(str);
-}
-
 
 // This is assert.js
 
