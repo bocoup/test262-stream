@@ -12,10 +12,11 @@
     },
     "includes": [
       "assert.js",
+      "sta.js",
       "doneprintHandle.js"
     ]
   },
   "copyright": "",
   "scenario": "strict mode",
-  "insertionIndex": 705
+  "insertionIndex": 579
 }
