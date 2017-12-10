@@ -127,7 +127,7 @@ tape('valid source directory (with custom includes)', t => {
   });
 
   stream.on('end', () => {
-    t.equal(ids.length, 2, 'Reports every available test');
+    t.equal(ids.length, 4, 'Reports every available test');
     t.end();
   });
 });
