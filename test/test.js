@@ -225,7 +225,7 @@ tape('invalid source directory (accepting newer version)', t => {
 tape('invalid source directory (with a version that differs from the "accepted" versoin)', t => {
   const fixtureDir = path.join(__dirname, 'collateral', 'invalid-version-other-accepted');
   const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), {
-    acceptVersion: '2.0.1'
+    acceptVersion: '3.0.1'
   });
 
   stream.on('data', () => {
