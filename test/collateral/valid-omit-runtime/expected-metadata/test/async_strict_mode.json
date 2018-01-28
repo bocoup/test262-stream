@@ -1,0 +1,14 @@
+{
+  "file": "test/async.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "Async test (Strict Mode)",
+    "flags": {
+      "async": true
+    },
+    "includes": []
+  },
+  "copyright": "",
+  "scenario": "strict mode",
+  "insertionIndex": 14
+}

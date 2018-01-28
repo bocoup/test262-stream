@@ -21,6 +21,10 @@ var stream = new TestStream('/path/to/test262', {
     // Optional. Defaults to ['test']
     paths: ['test/built-ins/eval', 'test/language/statements/empty/S12.3_A1.js'],
 
+    // Flag to disable the insertion of code necessary to execute the test
+    // (e.g. assertion functions and "include" files); defaults to `false`
+    omitRuntime: true,
+
     // By default, this stream will emit an error if the provided version of
     // Test262 is not supported; this behavior may be disabled by providing a
     // value of the expected version. Use of this option may cause the stream

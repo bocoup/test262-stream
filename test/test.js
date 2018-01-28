@@ -241,3 +241,23 @@ tape('invalid source directory (with a version that differs from the "accepted" 
     t.end();
   });
 });
+
+tape('omit runtime', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-omit-runtime');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'), {
+    omitRuntime: true
+  });
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 16, 'Reports every available test');
+    t.end();
+  });
+});
