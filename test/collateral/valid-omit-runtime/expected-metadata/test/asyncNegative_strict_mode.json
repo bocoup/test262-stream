@@ -1,0 +1,18 @@
+{
+  "file": "test/asyncNegative.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "Async negative test (Strict Mode)",
+    "negative": {
+      "phase": "runtime",
+      "type": "RangeError"
+    },
+    "flags": {
+      "async": true
+    },
+    "includes": []
+  },
+  "copyright": "",
+  "scenario": "strict mode",
+  "insertionIndex": 14
+}

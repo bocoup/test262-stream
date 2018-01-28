@@ -1,0 +1,14 @@
+{
+  "file": "test/rawStrict.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "Should not test in strict mode (but allow strict mode to be enabled)",
+    "flags": {
+      "raw": true
+    },
+    "includes": []
+  },
+  "copyright": "",
+  "scenario": "default",
+  "insertionIndex": -1
+}

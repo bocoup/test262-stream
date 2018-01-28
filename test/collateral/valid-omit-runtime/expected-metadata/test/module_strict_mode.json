@@ -1,0 +1,14 @@
+{
+  "file": "test/module.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "A test for module code (Strict Mode)",
+    "flags": {
+      "module": true
+    },
+    "includes": []
+  },
+  "copyright": "",
+  "scenario": "strict mode",
+  "insertionIndex": 14
+}
