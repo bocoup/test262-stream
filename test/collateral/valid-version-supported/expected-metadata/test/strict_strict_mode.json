@@ -2,7 +2,7 @@
   "file": "test/strict.js",
   "contents": "(The value of this property is over-sized, so it is validated independently.)",
   "attrs": {
-    "description": "Should not test in sloppy mode",
+    "description": "Should not test in sloppy mode (Strict Mode)",
     "flags": {
       "onlyStrict": true
     },
