@@ -261,3 +261,22 @@ tape('omit runtime', t => {
     t.end();
   });
 });
+
+tape('completion detection when final files visited are not tests', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-extra-files');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'));
+  const ids = [];
+
+  global.mike = true;
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 2, 'Reports every available test');
+    t.end();
+  });
+});
