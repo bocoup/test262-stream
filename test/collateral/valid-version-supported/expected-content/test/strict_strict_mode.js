@@ -33,5 +33,3 @@ $ERROR = function $ERROR(message) {
 
 x = 5;
 $ERROR('Not in strict mode');
-
-;$DONE();

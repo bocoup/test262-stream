@@ -32,5 +32,3 @@ $ERROR = function $ERROR(message) {
 
 
 import fixture from './module_FIXTURE.js';
-
-;$DONE();

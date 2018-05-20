@@ -32,5 +32,3 @@ $ERROR = function $ERROR(message) {
 
 
 $ERROR('failure message');
-
-;$DONE();

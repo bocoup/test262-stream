@@ -39,5 +39,3 @@ if(strict) {
 } else {
     throw new ReferenceError();
 }
-
-;$DONE();

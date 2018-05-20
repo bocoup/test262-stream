@@ -30,5 +30,3 @@ $ERROR = function $ERROR(message) {
 };
 
 
-
-;$DONE();
