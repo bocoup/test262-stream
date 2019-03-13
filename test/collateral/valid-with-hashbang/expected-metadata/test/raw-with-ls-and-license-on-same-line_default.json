@@ -1,0 +1,21 @@
+{
+  "file": "test/raw-with-ls-and-license-on-same-line.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "Has a license after the hashbang, on same line. There is an <LS> between them.\n",
+    "features": [
+      "hashbang"
+    ],
+    "flags": {
+      "raw": true
+    },
+    "negative": {
+      "phase": "runtime",
+      "type": "ReferenceError"
+    },
+    "includes": []
+  },
+  "copyright": "// Copyright (c) 2019, Bocoup LLC. All rights reserved.",
+  "scenario": "default",
+  "insertionIndex": -1
+}

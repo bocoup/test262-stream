@@ -20,8 +20,7 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
-    "js-yaml": "^3.12.2",
-    "klaw": "^2.1.0",
-    "through": "^2.3.8"
+    "js-yaml": "^3.2.1",
+    "klaw": "^2.1.0"
   }
 }

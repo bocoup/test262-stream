@@ -1,0 +1,21 @@
+{
+  "file": "test/raw-with-ls.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "No license after the hashbang. Contents should have hashbang",
+    "features": [
+      "hashbang"
+    ],
+    "flags": {
+      "raw": true
+    },
+    "negative": {
+      "phase": "runtime",
+      "type": "ReferenceError"
+    },
+    "includes": []
+  },
+  "copyright": "",
+  "scenario": "default",
+  "insertionIndex": -1
+}

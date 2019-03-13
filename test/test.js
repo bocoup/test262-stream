@@ -28,6 +28,7 @@ function makeDataHandler(t, ids, fixtureDir) {
   }
 
   return (test) => {
+
     if (typeof test !== 'object' || test === null) {
       t.ok(false, 'Emits object values');
       return;
@@ -277,6 +278,24 @@ tape('completion detection when final files visited are not tests', t => {
 
   stream.on('end', () => {
     t.equal(ids.length, 2, 'Reports every available test');
+    t.end();
+  });
+});
+
+tape('valid source directory (with hashbang tests)', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-with-hashbang');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'));
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 10, 'Reports every available test');
     t.end();
   });
 });
