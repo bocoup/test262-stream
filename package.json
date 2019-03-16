@@ -14,7 +14,7 @@
   "author": "",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "jshint": "^2.9.5",
+    "jshint": "^2.10.2",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2",
     "tape": "^4.8.0"
