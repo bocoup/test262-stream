@@ -1,6 +1,6 @@
 {
   "name": "test262-stream",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Node.js API for traversing the Test262 test suite",
   "main": "lib/index.js",
   "directories": {
