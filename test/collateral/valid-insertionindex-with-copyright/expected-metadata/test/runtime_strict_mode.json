@@ -1,17 +1,15 @@
 {
-  "file": "test/module.js",
+  "file": "test/runtime.js",
   "contents": "(The value of this property is over-sized, so it is validated independently.)",
   "attrs": {
-    "description": "A test for module code (Strict Mode)",
-    "flags": {
-      "module": true
-    },
+    "description": "License and correct insertionIndex (Strict Mode)",
+    "flags": {},
     "includes": [
       "assert.js",
       "sta.js"
     ]
   },
-  "copyright": "",
+  "copyright": "// Copyright (C) 2048 $ContributorName. All rights reserved.",
   "scenario": "strict mode",
   "insertionIndex": 453
 }

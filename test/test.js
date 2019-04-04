@@ -299,3 +299,21 @@ tape('valid source directory (with hashbang tests)', t => {
     t.end();
   });
 });
+
+tape('copyright and insertionIndex integrity', t => {
+  const fixtureDir = path.join(__dirname, 'collateral', 'valid-insertionindex-with-copyright');
+  const stream = new TestStream(path.join(fixtureDir, 'fake-test262'));
+  const ids = [];
+
+  stream.on('data', makeDataHandler(t, ids, fixtureDir));
+
+  stream.on('error', (error) => {
+    t.ok(error);
+    t.end(error);
+  });
+
+  stream.on('end', () => {
+    t.equal(ids.length, 3, 'Reports every available test');
+    t.end();
+  });
+});

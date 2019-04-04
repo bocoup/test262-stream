@@ -1,0 +1,14 @@
+{
+  "file": "test/raw.js",
+  "contents": "(The value of this property is over-sized, so it is validated independently.)",
+  "attrs": {
+    "description": "License and correct insertionIndex",
+    "flags": {
+      "raw": true
+    },
+    "includes": []
+  },
+  "copyright": "// Copyright (C) 2048 $ContributorName. All rights reserved.",
+  "scenario": "default",
+  "insertionIndex": -1
+}

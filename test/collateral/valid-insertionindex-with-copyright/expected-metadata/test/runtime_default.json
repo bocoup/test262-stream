@@ -1,19 +1,15 @@
 {
-  "file": "test/error.js",
+  "file": "test/runtime.js",
   "contents": "(The value of this property is over-sized, so it is validated independently.)",
   "attrs": {
-    "description": "Fails by calling $ERROR",
-    "negative": {
-      "phase": "runtime",
-      "type": "Test262Error"
-    },
+    "description": "License and correct insertionIndex",
     "flags": {},
     "includes": [
       "assert.js",
       "sta.js"
     ]
   },
-  "copyright": "",
+  "copyright": "// Copyright (C) 2048 $ContributorName. All rights reserved.",
   "scenario": "default",
   "insertionIndex": 439
 }
