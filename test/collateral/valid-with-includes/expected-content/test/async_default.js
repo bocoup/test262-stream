@@ -40,7 +40,10 @@ function $DONE(){
 }
 // End customized implementation of `doneprintHandle.js`
 
-
+/*---
+description: Async test
+flags: [async]
+---*/
 
 var p = new Promise(function(resolve) {
   resolve();

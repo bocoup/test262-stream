@@ -3,7 +3,14 @@
 // Copyright (c) 2019, Bocoup LLC. All rights reserved.
 // This code is governed by the BSD license found in the LICENSE file.
 
-
+/*---
+description: Has a license after the hashbang. Contents should have hashbang
+features: [hashbang]
+flags: [raw]
+negative:
+  phase: runtime
+  type: ReferenceError
+---*/
 var strict;
 try { x = 1; strict = false;} catch(e) { strict = true }
 

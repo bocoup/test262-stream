@@ -36,7 +36,10 @@ function $DONE(){
     print('Error: ' + arguments[0]);
 }
 
-
+/*---
+description: Async test
+flags: [async]
+---*/
 
 var p = new Promise(function(resolve) {
   resolve();
