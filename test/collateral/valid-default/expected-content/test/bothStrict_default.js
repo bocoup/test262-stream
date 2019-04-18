@@ -29,7 +29,13 @@ $ERROR = function $ERROR(message) {
   throw new Test262Error(message);
 };
 
-
+/*---
+description: Should test in both modes
+features: [var, try, if]
+negative:
+  phase: runtime
+  type: ReferenceError
+---*/
 var strict;
 try { x = 1; strict = false;} catch(e) { strict = true }
 

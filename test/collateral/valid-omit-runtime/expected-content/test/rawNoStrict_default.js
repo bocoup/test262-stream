@@ -1,4 +1,7 @@
-
+/*---
+description: Should not test in strict mode
+flags: [raw]
+---*/
 var seemsStrict;
 try {
   x = 1;

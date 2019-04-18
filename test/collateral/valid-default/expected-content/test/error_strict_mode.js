@@ -30,6 +30,11 @@ $ERROR = function $ERROR(message) {
   throw new Test262Error(message);
 };
 
-
+/*---
+description: Fails by calling $ERROR
+negative:
+  phase: runtime
+  type: Test262Error
+---*/
 
 $ERROR('failure message');

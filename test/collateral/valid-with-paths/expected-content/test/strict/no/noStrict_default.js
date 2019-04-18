@@ -29,5 +29,8 @@ $ERROR = function $ERROR(message) {
   throw new Test262Error(message);
 };
 
-
+/*---
+description: Should not test in strict mode
+flags: [noStrict]
+---*/
 x = 5;

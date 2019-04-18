@@ -1,4 +1,7 @@
-
+/*---
+description: Should not test in strict mode (but allow strict mode to be enabled)
+flags: [raw]
+---*/
 'use strict';
 var seemsStrict;
 try {
